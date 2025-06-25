@@ -122,7 +122,7 @@ data = dict(
         resize_lim=resize_lim,
         num_pts=num_anchor_init,
         pretrained_depth_model=pretrained_depth_model,
-        data_tg='attn',
+        data_tg='base',
         ),
     val=dict(
         type=dataset_type,
@@ -135,7 +135,7 @@ data = dict(
         resize_lim=resize_lim,
         num_pts=num_anchor_init,
         pretrained_depth_model=pretrained_depth_model,
-        data_tg='attn',
+        data_tg='base',
         ),
     test=dict(
         type=dataset_type,
@@ -148,7 +148,7 @@ data = dict(
         resize_lim=resize_lim,
         num_pts=num_anchor_init,
         pretrained_depth_model=pretrained_depth_model,
-        data_tg='attn',
+        data_tg='base',
         )
 )
 
