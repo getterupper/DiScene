@@ -57,7 +57,6 @@ MANIFEST
 pyrightconfig.json
 
 # Custom
-data
 outputs
 prediction
 submission
