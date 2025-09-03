@@ -14,6 +14,7 @@ from mmcv import Config
 import os
 
 import sys
+# NOTE: modify below to /your/path/to/DiScene
 sys.path.append('/path/to/DiScene')
 sys.path.append('/path/to/DiScene/depth_anything/metric_depth')
 sys.path.append('/path/to/DiScene/Depth-Anything-V2/metric_depth')
@@ -68,6 +69,7 @@ class DiSceneHead_Teacher(BaseModule):
         # depth branch
         self.pretrained_depth_model = pretrained_depth_model
         if pretrained_depth_model == 'DepthAnythingV1':
+            # NOTE: modify below to /your/path/to/DiScene
             overrite = {"pretrained_resource": "local::/path/to/DiScene/checkpoints/depth_anything_metric_depth_indoor.pt"}
             from depth_anything.metric_depth.zoedepth.models.builder import build_model as build_depthany_model
             from depth_anything.metric_depth.zoedepth.utils.config import get_config as get_depthany_config
@@ -88,6 +90,7 @@ class DiSceneHead_Teacher(BaseModule):
                 'vitg': {'encoder': 'vitg', 'features': 384, 'out_channels': [1536, 1536, 1536, 1536]}
             }
             self.depth_model = DepthAnythingV2(**{**model_configs['vitb'], 'max_depth':20})
+            # NOTE: modify below to /your/path/to/DiScene
             checkpoint = torch.load('/path/to/DiScene/checkpoints/finetune_scannet_depthanythingv2.pth', map_location='cpu')['model']
             new_state_dict = {}
             for k, v in checkpoint.items():
@@ -102,6 +105,7 @@ class DiSceneHead_Teacher(BaseModule):
         elif self.pretrained_depth_model == 'Metric3Dv2-Small':
             from mono.utils.mldb import load_data_info, reset_ckpt_path
             from mono.model.monodepth_model import get_configured_monodepth_model
+            # NOTE: modify below to /your/path/to/DiScene
             cfg = Config.fromfile('/path/to/DiScene/Metric3D/mono/configs/HourglassDecoder/vit.raft5.small.py')
             cfg.load_from = '/path/to/.cache/torch/hub/checkpoints/metric_depth_vit_small_800k.pth'
             cfg.batch_size = 1
@@ -124,6 +128,7 @@ class DiSceneHead_Teacher(BaseModule):
         elif self.pretrained_depth_model == 'Metric3Dv2-Giant':
             from mono.utils.mldb import load_data_info, reset_ckpt_path
             from mono.model.monodepth_model import get_configured_monodepth_model
+            # NOTE: modify below to /your/path/to/DiScene
             cfg = Config.fromfile('/path/to/DiScene/Metric3D/mono/configs/HourglassDecoder/vit.raft5.giant2.py')
             cfg.load_from = '/path/to/.cache/torch/hub/checkpoints/metric_depth_vit_giant2_800k.pth'
             cfg.batch_size = 1

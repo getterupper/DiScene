@@ -63,7 +63,7 @@ class DiScene_Distill(MVXTwoStageDetector):
         # Teacher-Guided Initialization
         new_transformer_state_dict = dict()
         for k, v in checkpoint.items():
-            elif k.startswith('pts_bbox_head.transformer.'):
+            if k.startswith('pts_bbox_head.transformer.'):
                 new_k = k[len('pts_bbox_head.transformer.'):]
                 new_transformer_state_dict[new_k] = v
         self.pts_bbox_head.transformer.load_state_dict(new_transformer_state_dict, strict=True)

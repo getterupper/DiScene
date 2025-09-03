@@ -77,3 +77,5 @@ Also, we would like to thank these excellent open source projects:
 
 - [ISO](https://github.com/hongxiaoy/ISO)
 - [EmbodiedOcc](https://github.com/YkiWu/EmbodiedOcc)
+- [Metric3D](https://github.com/YvanYin/Metric3D)
+- [Depth Anything V2](https://github.com/DepthAnything/Depth-Anything-V2.git)
