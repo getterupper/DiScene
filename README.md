@@ -1,6 +1,15 @@
 # DiScene
 
-> **Enhancing Indoor Occupancy Prediction via Sparse Query-Based Multi-Level Consistent Knowledge Distillation**
+> **Enhancing Indoor Occupancy Prediction via Sparse Query-Based Multi-Level Consistent Knowledge Distillation**  [[paper](https://ieeexplore.ieee.org/document/11183690)]
+>
+> *RA-L 2025*
+
+## TODO
+
+- [x] Initial commit
+- [ ] Model zoo
+- [ ] arXiv version
+
 
 ![](./pics/teaser.png)
 
@@ -79,3 +88,19 @@ Also, we would like to thank these excellent open source projects:
 - [EmbodiedOcc](https://github.com/YkiWu/EmbodiedOcc)
 - [Metric3D](https://github.com/YvanYin/Metric3D)
 - [Depth Anything V2](https://github.com/DepthAnything/Depth-Anything-V2.git)
+
+## Bibtex
+If you find this work useful, please consider citing:
+
+```
+@article{li2025enhancing,
+  title={Enhancing Indoor Occupancy Prediction Via Sparse Query-Based Multi-Level Consistent Knowledge Distillation},
+  author={Li, Xiang and Zheng, Yupeng and Li, Pengfei and Chen, Yilun and Zhang, Ya-Qin and Ding, Wenchao},
+  journal={IEEE Robotics and Automation Letters},
+  year={2025},
+  volume={10},
+  number={11},
+  pages={11690-11697},
+  doi={10.1109/LRA.2025.3615532}
+}
+```
