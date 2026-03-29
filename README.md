@@ -7,8 +7,8 @@
 ## TODO
 
 - [x] Initial commit
-- [ ] Model zoo
-- [ ] arXiv version
+- [x] Model zoo
+- [x] arXiv version
 
 
 ![](./pics/teaser.png)
@@ -76,7 +76,7 @@ DiScene
 
 |          Method           | mIoU  |                            Config                            | Checkpoints |
 | :-----------------------: | :---: | :----------------------------------------------------------: | :---------: |
-| DiScene† |  47.17 | [config](configs/occscannet/r50/discene_960x16_guided_distill_r50.py) |   Coming soon... 🏗️ 🚧 🔨    |
+| DiScene† |  47.17 | [config](configs/occscannet/r50/discene_960x16_guided_distill_r50.py) |    [model](https://huggingface.co/FortyTwoo/DiScene/blob/main/discene.pth)    |
 
 ## Acknowledgement
 
@@ -101,6 +101,7 @@ If you find this work useful, please consider citing:
   volume={10},
   number={11},
   pages={11690-11697},
+  publisher={IEEE}，
   doi={10.1109/LRA.2025.3615532}
 }
 ```
